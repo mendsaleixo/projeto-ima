@@ -3,23 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Projeto IMA - Registro de Ocorrências</title>
+    <title>IMA - Registro de Ocorrências</title>
   </head>
   <body>
     <header>
-      <img src="assets/img/logo.png" alt="Logo do Projeto" />
+      <img src="./assets/img/ima-logo.png" alt="Logo do Projeto" />
       <h1>Formulário de Registro</h1>
     </header>
     <main>
       <form action="" id="ocorrencia-form">
         <fieldset>
-          <legend>1. Identificação e Local da Ocorrência</legend>
-          <label for="tombo_ima">Tombo IMA</label>
-          <input type="text" id="tombo_ima" name="tombo_ima" required />
+          <legend>1. Identificação e local da ocorrência</legend>
+
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="tombo_ima">Tombo IMA</label>
+              <input type="text" id="tombo_ima" name="tombo_ima" required />
+            </div>
+            <div class="campo">
+              <label for="responsavel_registro"
+                >Responsável pelo registro</label
+              >
+              <input
+                type="text"
+                id="responsavel_registro"
+                name="responsavel_registro"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="data_ocorrencia">Data da ocorrência</label>
+              <input
+                type="date"
+                id="data_ocorrencia"
+                name="data_ocorrencia"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="horario_coleta">Horário da coleta</label>
+              <input
+                type="time"
+                id="horario_coleta"
+                name="horario_coleta"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="uf">UF (Estado)</label>
+              <select id="uf" name="uf" required>
+                <option value="">Selecione um estado...</option>
+                <option value="BA">Bahia</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="municipio">Município</label>
+              <select id="municipio" name="municipio" required>
+                <option value="">Selecione um município...</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="local_especifico">Local específico</label>
+            <textarea
+              id="local_especifico"
+              name="local_especifico"
+              required
+            ></textarea>
+          </div>
+          <div class="campo-grupo">
+            <div class="campo">
+              <label for="latitude">Latitude</label>
+              <input type="text" id="latitude" name="latitude" />
+            </div>
+            <div class="campo">
+              <label for="longitude">Longitude</label>
+              <input type="text" id="longitude" name="longitude" />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="nome_foto">Foto</label>
+            <input type="file" id="nome_foto" name="caminho_foto" />
+          </div>
         </fieldset>
         <fieldset>
-          <legend>2. Triagem e Status do Animal</legend>
+          <legend>2. Triagem e status do animal</legend>
         </fieldset>
       </form>
     </main>

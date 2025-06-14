@@ -1,11 +1,75 @@
+/* O reset bom */
+* {
+  box-sizing: border-box;
+}
+
+/* Acessibilidade: remove o outline apenas se o usuário não estiver usando o teclado */
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+/* Opcional: Estilize um anel de foco mais bonito para quem usa o teclado */
+:focus-visible {
+  outline: 2px solid royalblue;
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0; /*resetar body*/
+  padding: 0; /*resetar body*/
+  font-family: "Open sans", sans-serif;
+}
+header {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+header > img {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+main {
+  max-width: 1200px; /*limitas a largura*/
+  margin: 50px auto; /*Centralização horizontal (topo e baixo | laterais*/
+}
+
 fieldset {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
 }
-.input-group {
+
+/* Estilos gerais para todos os campos individuais */
+.campo {
+  margin-bottom: 1rem; /* Adiciona um espaço abaixo de cada campo ou grupo */
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+}
+
+.campo label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* A MÁGICA PARA O LAYOUT EM LINHA */
+.campo-grupo {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start; /* Alinha os itens do grupo no topo */
+}
+
+.campo-grupo .campo {
+  flex: 1; /* Faz cada campo no grupo ocupar o mesmo espaço */
+  margin-bottom: 0; /* Remove a margem de baixo dos campos que estão dentro de um grupo */
 }
