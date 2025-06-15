@@ -13,38 +13,40 @@
     />
 
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
     <title>IMA - Registro de Ocorrências</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <img src="./assets/img/ima-logo.png" alt="Logo do Projeto" />
       <h1>Formulário de Registro</h1>
     </header>
-    <main>
+    <main class="container">
       <form action="" id="ocorrencia-form">
         <fieldset>
           <legend>1. Identificação e local da ocorrência</legend>
 
-          <div class="campo-grupo">
-            <div class="campo">
-              <label for="tombo_ima">Tombo IMA</label>
-              <input type="text" id="tombo_ima" name="tombo_ima" required />
-            </div>
-            <div class="campo">
-              <label for="responsavel_registro"
-                >Responsável pelo registro</label
-              >
-              <input
-                type="text"
-                id="responsavel_registro"
-                name="responsavel_registro"
-                required
-              />
-            </div>
+          <div class="campo">
+            <label for="tombo_ima">Tombo IMA</label>
+            <input type="text" id="tombo_ima" name="tombo_ima" required />
+          </div>
+
+          <div class="campo">
+            <label for="responsavel_registro">Responsável pelo registro</label>
+            <input
+              type="text"
+              id="responsavel_registro"
+              name="responsavel_registro"
+              required
+            />
           </div>
 
           <div class="campo-grupo">
-            <div class="campo">
+            <div class="campo campo-medio">
               <label for="data_ocorrencia">Data da ocorrência</label>
               <input
                 type="date"
@@ -53,7 +55,7 @@
                 required
               />
             </div>
-            <div class="campo">
+            <div class="campo campo-medio">
               <label for="horario_coleta">Horário da coleta</label>
               <input
                 type="time"
@@ -65,14 +67,14 @@
           </div>
 
           <div class="campo-grupo">
-            <div class="campo">
+            <div class="campo campo-medio">
               <label for="uf">UF (Estado)</label>
               <select id="uf" name="uf" required>
                 <option value="">Selecione um estado...</option>
                 <option value="BA">Bahia</option>
               </select>
             </div>
-            <div class="campo">
+            <div class="campo campo-medio">
               <label for="municipio">Município</label>
               <select id="municipio" name="municipio" required>
                 <option value="">Selecione um município...</option>
@@ -88,11 +90,11 @@
             ></textarea>
           </div>
           <div class="campo-grupo">
-            <div class="campo">
+            <div class="campo campo-medio">
               <label for="latitude">Latitude</label>
               <input type="text" id="latitude" name="latitude" />
             </div>
-            <div class="campo">
+            <div class="campo campo-medio">
               <label for="longitude">Longitude</label>
               <input type="text" id="longitude" name="longitude" />
             </div>
@@ -110,10 +112,10 @@
           <legend>3. Classificação biológica</legend>
         </fieldset>
         <fieldset>
-          <legend>4. Avaliação clínica e biometria</legend>
+          <legend>4. Avaliação clínica e biometria (quando couber)</legend>
         </fieldset>
         <fieldset>
-          <legend>5. Dados de necropsia (quando morto)</legend>
+          <legend>5. Dados de necropsia (quando couber)</legend>
         </fieldset>
         <fieldset>
           <legend>6. Resultados de exames complementares</legend>
@@ -123,6 +125,6 @@
         </fieldset>
       </form>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" defer></script>
   </body>
 </html>
