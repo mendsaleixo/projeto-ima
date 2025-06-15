@@ -46,6 +46,10 @@ fieldset {
   margin-bottom: 2rem;
 }
 
+legend {
+  font-size: 1.5rem;
+}
+
 .campo {
   margin-bottom: 1rem;
   display: flex;
