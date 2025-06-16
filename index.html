@@ -107,6 +107,99 @@
         </fieldset>
         <fieldset>
           <legend>2. Triagem e status do animal</legend>
+
+          <div class="campo-grupo">
+            <div class="campo campo-grande">
+              <label for="tipo_entrada">Tipo de entrada</label>
+              <select id="tipo_entrada" name="tipo_entrada" required>
+                <option value="">Selecione o tipo de entrada...</option>
+                <option value="entrada_pa">Pronto atendimento</option>
+                <option value="entrada_rt">Repasse-terceiros</option>
+              </select>
+            </div>
+
+            <div class="campo campo-pequeno">
+              <fieldset class="fieldset-pequeno">
+                <legend>Status do animal</legend>
+
+                <label for="status_vivo">
+                  <input
+                    type="radio"
+                    id="status_vivo"
+                    name="status_animal"
+                    value="Vivo"
+                    required
+                  />
+                  Vivo
+                </label>
+
+                <label for="status_morto">
+                  <input
+                    type="radio"
+                    id="status_morto"
+                    name="status_animal"
+                    value="Morto"
+                  />
+                  Morto
+                </label>
+              </fieldset>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="classificacao_ocorrencia"
+              >Classificação da ocorrência</label
+            >
+            <select
+              id="classificacao_ocorrencia"
+              name="classificacao_ocorrencia"
+              required
+            >
+              <option value="">
+                Selecione a classificação da ocorrência...
+              </option>
+              <option value="ocorrencia_rr">Resgate e Reabilitação</option>
+              <option value="ocorrencia_co">Coleta</option>
+              <option value="ocorrencia_re">Registro</option>
+            </select>
+          </div>
+          <div class="campo-grupo">
+            <div class="campo campo-medio">
+              <label for="code_decomposicao">CODE (Decomposição)</label>
+              <input
+                type="number"
+                id="code_decomposicao"
+                name="code_decomposicao"
+                min="1"
+                max="5"
+                required
+              />
+            </div>
+            <div class="campo campo-medio">
+              <fieldset class="fieldset-pequeno">
+                <legend>Sinais de Interação com a Pesca</legend>
+                <label for="pesca_sim">
+                  <input
+                    type="radio"
+                    id="pesca_sim"
+                    name="interacao_pesca"
+                    value="Sim"
+                    required
+                  />
+                  Sim
+                </label>
+
+                <label for="pesca_nao">
+                  <input
+                    type="radio"
+                    id="pesca_nao"
+                    name="interacao_pesca"
+                    value="Nao"
+                  />
+                  Não
+                </label>
+              </fieldset>
+            </div>
+          </div>
         </fieldset>
         <fieldset>
           <legend>3. Classificação biológica</legend>

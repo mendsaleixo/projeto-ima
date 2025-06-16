@@ -46,6 +46,21 @@ fieldset {
   margin-bottom: 2rem;
 }
 
+.fieldset-pequeno {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.fieldset-pequeno legend {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 legend {
   font-size: 1.5rem;
 }
