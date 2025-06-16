@@ -23,20 +23,49 @@ body {
   margin-right: auto;
 }
 
-header.container {
-  margin-top: 50px;
-  margin-bottom: 20px;
+header.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 main.container {
-  margin-top: 0;
+  margin-top: 260px;
   margin-bottom: 50px;
 }
 
-header img {
-  display: block;
+header.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+header.cabecalho img {
   height: 150px;
-  margin: 20px auto;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+header.cabecalho h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
 }
 
 fieldset {
